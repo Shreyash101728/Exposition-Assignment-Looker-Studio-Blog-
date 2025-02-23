@@ -8,20 +8,20 @@
     <style>
         /* Global Styles */
         body {
-            font-family: 'Lora', serif; /* Elegant body font */
+            font-family: 'Lora', serif;
             line-height: 1.8;
-            color: #e0e0e0; /* Light gray for text */
-            background-color: #1a1a1a; /* Dark background */
+            color: #e0e0e0;
+            background-color: #1a1a1a;
             margin: 0;
             padding: 0;
             display: flex;
         }
 
         h1, h2 {
-            font-family: 'Playfair Display', serif; /* Elegant heading font */
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            color: #ffffff; /* White for headings */
+            color: #ffffff;
         }
 
         h1 {
@@ -37,18 +37,18 @@
         p {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
-            color: #e0e0e0; /* Light gray for paragraphs */
+            color: #e0e0e0;
         }
 
         a {
-            color: #ffffff; /* White for links */
+            color: #ffffff;
             text-decoration: none;
-            border-bottom: 1px solid #ffffff; /* Underline effect */
+            border-bottom: 1px solid #ffffff;
             transition: opacity 0.3s ease;
         }
 
         a:hover {
-            opacity: 0.7; /* Subtle hover effect */
+            opacity: 0.7;
         }
 
         /* Background Animation */
@@ -71,31 +71,31 @@
         }
 
         .container {
-            background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            background: rgba(0, 0, 0, 0.8);
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             flex: 1;
-            margin-left: 250px; /* Space for the sidebar */
+            margin-left: 250px;
         }
 
         /* Sidebar Navigation */
         .sidebar {
             width: 200px;
-            background: rgba(0, 0, 0, 0.9); /* Dark sidebar */
+            background: rgba(0, 0, 0, 0.9);
             padding: 1rem;
             position: fixed;
             height: 100vh;
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-            transform: translateX(-100%); /* Start off-screen */
-            opacity: 0; /* Start invisible */
-            animation: slideIn 0.8s ease-out forwards 0.5s; /* Slide-in animation with delay */
+            transform: translateX(-100%);
+            opacity: 0;
+            animation: slideIn 0.8s ease-out forwards 0.5s;
         }
 
         @keyframes slideIn {
             to {
-                transform: translateX(0); /* Slide into view */
-                opacity: 1; /* Fade in */
+                transform: translateX(0);
+                opacity: 1;
             }
         }
 
@@ -109,7 +109,7 @@
         }
 
         .sidebar ul li a {
-            color: #ffffff; /* White for sidebar links */
+            color: #ffffff;
             font-weight: 500;
             transition: all 0.3s ease;
             display: block;
@@ -125,23 +125,26 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #ffffff; /* White underline */
+            background: #ffffff;
             transition: width 0.3s ease;
         }
 
         .sidebar ul li a:hover {
-            transform: translateX(10px); /* Hover effect */
+            transform: translateX(10px);
         }
 
         .sidebar ul li a:hover::before {
-            width: 100%; /* Animated underline */
+            width: 100%;
         }
 
         /* Image Styling */
         img {
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            /* Removed grayscale filter and hover animation */
+            max-width: 100%; /* Ensures the image is responsive */
+            height: auto; /* Maintains aspect ratio */
+            display: block; /* Ensures proper spacing */
+            margin: 1rem 0; /* Adds margin for better spacing */
         }
 
         /* Video Styling */
@@ -150,6 +153,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 600px;
+            height: auto; /* Maintains aspect ratio */
             margin: 1rem 0;
         }
 
@@ -157,6 +161,8 @@
         .gif {
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%; /* Ensures the GIF is responsive */
+            height: auto; /* Maintains aspect ratio */
             margin: 1rem 0;
         }
     </style>
