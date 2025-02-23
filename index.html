@@ -1,72 +1,43 @@
-<h2 id="introduction">Introduction</h2>
-    <p>In today's data-driven world, making sense of information is crucial for businesses. Looker Studio (formerly Google Data Studio) is a cloud-based business intelligence (BI) and data visualization tool that helps users create interactive reports and dashboards without coding.</p>
+<div class="container">
+    <h1>Looker Studio: The Best Cloud-Based BI & Data Visualization Tool</h1>
+    <p>Looker Studio (formerly Google Data Studio) is a powerful tool for creating interactive dashboards and reports, seamlessly integrating with Google services.</p>
     <img src="dashboard-example.jpg" alt="Looker Studio Dashboard Example">
 
-    <h2 id="setup">Getting Started: Setup & Configuration</h2>
-    <p>Since Looker Studio is cloud-based, there's no need to install any software. You just need a Google account to start creating reports.</p>
+    <h2 id="setup">Getting Started</h2>
     <ol>
-        <li>Visit <a href="https://lookerstudio.google.com/" target="_blank">Looker Studio</a> and log in.</li>
-        <li>Click "Create" -> "Report" to begin.</li>
-        <li>Select a data source (Google Analytics, Google Sheets, etc.) and connect it.</li>
+        <li>Visit <a href="https://lookerstudio.google.com/" target="_blank">Looker Studio</a>.</li>
+        <li>Create a new report.</li>
+        <li>Connect a data source.</li>
     </ol>
 
     <h2 id="features">Key Features</h2>
     <ul>
-        <li>Seamless Google Integration with Google Analytics, BigQuery, Google Ads, and Sheets.</li>
-        <li>Drag-and-Drop Visualizations.</li>
-        <li>Real-Time Data Updates.</li>
-        <li>Connects with 600+ Data Sources.</li>
-        <li>Easy Sharing & Collaboration.</li>
-        <li>Custom Calculations & Filters.</li>
+        <li>Seamless integration with Google Analytics, BigQuery, and more.</li>
+        <li>Real-time data visualization.</li>
+        <li>Customizable dashboards.</li>
     </ul>
 
-    <h2 id="example">Step-by-Step Example: Building a Looker Studio Dashboard</h2>
-    <p>Imagine you're a digital marketer tracking website visitors from Google Analytics.</p>
-    <img src="analytics-dashboard.jpg" alt="Google Analytics Dashboard Example">
-    <ol>
-        <li>Open Looker Studio and create a new report.</li>
-        <li>Connect to Google Analytics.</li>
-        <li>Add visualizations such as line charts, pie charts, and bar charts.</li>
-        <li>Customize and share the report.</li>
-    </ol>
+    <h2 id="example">Example: Creating a Dashboard</h2>
+    <img src="analytics-dashboard.jpg" alt="Analytics Dashboard Example">
 
-    <h2 id="use-cases">Real-World Use Cases</h2>
+    <h2 id="use-cases">Use Cases</h2>
     <ul>
-        <li>Marketing Analytics.</li>
-        <li>Sales Performance.</li>
-        <li>Social Media Reporting.</li>
-        <li>Business KPI Tracking.</li>
-        <li>Financial Reporting.</li>
+        <li>Marketing analytics</li>
+        <li>Sales performance tracking</li>
     </ul>
 
     <h2 id="conclusion">Conclusion</h2>
-    <p>Looker Studio is a must-have tool for businesses looking to visualize and analyze data seamlessly. It's free, cloud-based, and perfect for Google ecosystem users.</p>
+    <p>Looker Studio is an essential BI tool, especially for those working in the Google ecosystem.</p>
 
-    <h2 id="references">References & Further Reading</h2>
+    <h2 id="references">References</h2>
     <ul>
-        <li><a href="https://lookerstudio.google.com/" target="_blank">Looker Studio Official Site</a></li>
-        <li><a href="https://support.google.com/lookerstudio" target="_blank">Google Looker Studio Help Center</a></li>
-        <li><a href="https://developers.google.com/looker-studio" target="_blank">Looker Studio Developer Guide</a></li>
+        <li><a href="https://lookerstudio.google.com/" target="_blank">Official Website</a></li>
     </ul>
-
-    <h2>Enable Dark Mode</h2>
-    <button onclick="toggleTheme()">Toggle Dark Mode</button>
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
 </div>
 
-<style>
-    body { font-family: 'Roboto', sans-serif; background-color: #f4f4f4; text-align: center; padding: 20px; }
-    .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); text-align: left; }
-    h1, h2 { color: #1565c0; text-align: center; }
-    p { font-size: 18px; color: #555; }
-    pre { background: #eeeeee; padding: 10px; border-radius: 5px; text-align: left; overflow-x: auto; }
-    nav a { margin: 0 15px; text-decoration: none; color: #1976d2; font-weight: bold; }
-    .dark-mode { background-color: #121212; color: white; }
-    button { padding: 10px 15px; background-color: #1976d2; color: white; border: none; cursor: pointer; border-radius: 5px; }
-    img { max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 10px; }
-</style>
-
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+<button class="button" onclick="toggleTheme()">Toggle Dark Mode</button>
