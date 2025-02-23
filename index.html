@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Looker Studio: Elegant Design</title>
+    <title>Looker Studio: Elegant Design with Navigation</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         /* Typography */
@@ -11,6 +11,9 @@
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
         }
 
         h1, h2 {
@@ -68,23 +71,37 @@
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin-left: 250px; /* Space for the sidebar */
         }
 
-        /* Button Animation */
-        .button {
-            background-color: #3498db;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 200px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            position: fixed;
+            height: 100vh;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .button:hover {
-            background-color: #2980b9;
-            transform: scale(1.05);
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 1rem 0;
+        }
+
+        .sidebar ul li a {
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            color: #3498db;
         }
 
         /* Image Animation */
@@ -107,9 +124,27 @@
                 opacity: 1;
             }
         }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#setup">Installation & Setup</a></li>
+            <li><a href="#features">Key Features</a></li>
+            <li><a href="#example">Step-by-Step Example</a></li>
+            <li><a href="#use-cases">Real-World Use Cases</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
         <h1>Looker Studio: The Best Cloud-Based BI & Data Visualization Tool</h1>
         <p>Looker Studio (formerly Google Data Studio) is a powerful cloud-based business intelligence (BI) tool that allows users to create interactive and shareable reports. It seamlessly integrates with multiple data sources, making data analysis more accessible and insightful.</p>
@@ -165,13 +200,5 @@
             <li><a href="https://developers.google.com/looker-studio" target="_blank">Looker Studio Developer Guide</a></li>
         </ul>
     </div>
-
-    <button class="button" onclick="toggleTheme()">Toggle Dark Mode</button>
-
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
 </body>
 </html>
