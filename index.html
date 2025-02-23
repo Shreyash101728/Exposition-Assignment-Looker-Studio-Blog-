@@ -137,21 +137,27 @@
             width: 100%; /* Animated underline */
         }
 
-        /* Image Animation */
+        /* Image Styling */
         img {
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            filter: grayscale(100%); /* Black-and-white images */
+            /* Removed grayscale filter and hover animation */
         }
 
-        img:hover {
-            transform: scale(1.05);
+        /* Video Styling */
+        video {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 1rem 0;
         }
 
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+        /* GIF Styling */
+        .gif {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
         }
     </style>
 </head>
