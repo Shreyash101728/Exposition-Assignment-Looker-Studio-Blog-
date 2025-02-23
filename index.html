@@ -77,6 +77,8 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             flex: 1;
             margin-left: 250px;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+            max-height: 100vh; /* Limit height to viewport height */
         }
 
         /* Sidebar Navigation */
@@ -90,6 +92,7 @@
             transform: translateX(-100%);
             opacity: 0;
             animation: slideIn 0.8s ease-out forwards 0.5s;
+            z-index: 1; /* Ensure sidebar stays above other content */
         }
 
         @keyframes slideIn {
@@ -210,8 +213,8 @@
             <li>Real-time data updates and live dashboards.</li>
             <li>Over 600+ data connectors available.</li>
             <video controls style="width: 50%; height: auto; margin: 1rem 0;">
-            <source src="scroll.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+                <source src="scroll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
             <li>Advanced filtering and custom calculations.</li>
             <li>Easy sharing and collaboration.</li>
@@ -224,17 +227,16 @@
             <li>Select File Upload as your data source.</li>
             <li>Drag and drop visualizations like line charts and tables.</li>
             <video controls style="width: 50%; height: auto; margin: 1rem 0;">
-            <source src="drag.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-</          video>
+                <source src="drag.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <li>Customize filters to analyze data trends.</li>
             <video controls style="width: 50%; height: auto; margin: 1rem 0;">
-            <source src="filter.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-</          video>
+                <source src="filter.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <li>Save and share the dashboard with your team.</li>
         </ol>
-        
 
         <h2 id="use-cases">Real-World Use Cases</h2>
         <ul>
