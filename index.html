@@ -4,11 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Looker Studio: Zen-Inspired Design</title>
-    <!-- Add Favicon -->
-    <link rel="icon" type="image/x-icon" href="iitgn.ico">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Your existing CSS styles */
+        /* Global Styles */
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            color: #e0e0e0;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            line-height: 1.3;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #e0e0e0;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid #ffffff;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* Background Animation */
+        body {
+            background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #1a1a1a, #2a2a2a);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin-left: 250px;
+            overflow-y: auto; /* Add scrollbar if content overflows */
+            max-height: 100vh; /* Limit height to viewport height */
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 200px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem;
+            position: fixed;
+            height: 100vh;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(-100%);
+            opacity: 0;
+            animation: slideIn 0.8s ease-out forwards 0.5s;
+            z-index: 1; /* Ensure sidebar stays above other content */
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 1rem 0;
+        }
+
+        .sidebar ul li a {
+            color: #ffffff;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .sidebar ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            transform: translateX(10px);
+        }
+
+        .sidebar ul li a:hover::before {
+            width: 100%;
+        }
+
+        /* Image Styling */
+        img {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 50%; /* Reduce image size to 50% */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensures proper spacing */
+            margin: 1rem 0; /* Adds margin for better spacing */
+        }
+
+        /* Video Styling */
+        video {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            height: auto; /* Maintains aspect ratio */
+            margin: 1rem 0;
+        }
+
+        /* GIF Styling */
+        .gif {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%; /* Ensures the GIF is responsive */
+            height: auto; /* Maintains aspect ratio */
+            margin: 1rem 0;
+        }
     </style>
 </head>
 <body>
@@ -34,16 +193,16 @@
         <p>Since Looker Studio is cloud-based, no software installation is required. Follow these steps to get started:</p>
         <ol>
             <li>Go to <a href="https://lookerstudio.google.com/" target="_blank">Looker Studio</a>.</li>
-            <img src="tolooker.jpg" alt="Screenshot of Looker Studio homepage">
+            <img src="tolooker.jpg" alt="Looker Studio Dashboard Example">
             <li>Log in using your Google account.</li>
-            <img src="login.jpg" alt="Screenshot of Looker Studio login page">
+            <img src="login.jpg" alt="Looker Studio Dashboard Example">
             <li>Click on "Create" -> "Report".</li>
-            <img src="createreport.jpg" alt="Screenshot of Looker Studio create report option">
-            <img src="report.jpg" alt="Screenshot of Looker Studio report interface">
-            <img src="country.jpg" alt="Screenshot of Looker Studio country selection">
-            <img src="yes.jpg" alt="Screenshot of Looker Studio confirmation">
+            <img src="createreport.jpg" alt="Looker Studio Dashboard Example">
+            <img src="report.jpg" alt="Looker Studio Dashboard Example">
+            <img src="country.jpg" alt="Looker Studio Dashboard Example">
+            <img src="yes.jpg" alt="Looker Studio Dashboard Example">
             <li>Choose a data source such as Google Analytics, BigQuery, or Google Sheets.</li>
-            <img src="data.jpg" alt="Screenshot of Looker Studio data source selection">
+            <img src="data.jpg" alt="Looker Studio Dashboard Example">
             <li>Connect and start building your reports.</li>
         </ol>
 
