@@ -83,6 +83,14 @@
             position: fixed;
             height: 100vh;
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            transform: translateX(-100%); /* Start off-screen */
+            animation: slideIn 0.5s ease-out forwards; /* Slide-in animation */
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0); /* Slide into view */
+            }
         }
 
         .sidebar ul {
@@ -97,11 +105,16 @@
         .sidebar ul li a {
             color: #2c3e50;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 5px;
         }
 
         .sidebar ul li a:hover {
             color: #3498db;
+            background: rgba(52, 152, 219, 0.1);
+            transform: translateX(10px); /* Hover effect */
         }
 
         /* Image Animation */
