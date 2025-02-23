@@ -3,53 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Looker Studio: Elegant Design with Navigation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Looker Studio: Zen-Inspired Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Typography */
+        /* Global Styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #e0e0e0; /* Light gray for text */
+            background-color: #1a1a1a; /* Dark background */
             margin: 0;
             padding: 0;
             display: flex;
         }
 
         h1, h2 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 1rem;
+            color: #ffffff; /* White for headings */
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #2c3e50;
-            animation: fadeIn 2s ease-in-out;
         }
 
         h2 {
             font-size: 2rem;
-            color: #34495e;
         }
 
         p {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
+            color: #e0e0e0; /* Light gray for paragraphs */
         }
 
         a {
-            color: #3498db;
+            color: #ffffff; /* White for links */
             text-decoration: none;
+            border-bottom: 1px solid #ffffff; /* Underline effect */
+            transition: opacity 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            opacity: 0.7; /* Subtle hover effect */
         }
 
         /* Background Animation */
         body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #1a1a1a, #2a2a2a);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
         }
@@ -67,7 +68,7 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -78,18 +79,20 @@
         /* Sidebar Navigation */
         .sidebar {
             width: 200px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.9); /* Dark sidebar */
             padding: 1rem;
             position: fixed;
             height: 100vh;
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
             transform: translateX(-100%); /* Start off-screen */
-            animation: slideIn 0.5s ease-out forwards; /* Slide-in animation */
+            opacity: 0; /* Start invisible */
+            animation: slideIn 0.8s ease-out forwards 0.5s; /* Slide-in animation with delay */
         }
 
         @keyframes slideIn {
             to {
                 transform: translateX(0); /* Slide into view */
+                opacity: 1; /* Fade in */
             }
         }
 
@@ -103,18 +106,32 @@
         }
 
         .sidebar ul li a {
-            color: #2c3e50;
+            color: #ffffff; /* White for sidebar links */
             font-weight: 500;
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: all 0.3s ease;
             display: block;
             padding: 0.5rem;
             border-radius: 5px;
+            position: relative;
+        }
+
+        .sidebar ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffffff; /* White underline */
+            transition: width 0.3s ease;
         }
 
         .sidebar ul li a:hover {
-            color: #3498db;
-            background: rgba(52, 152, 219, 0.1);
             transform: translateX(10px); /* Hover effect */
+        }
+
+        .sidebar ul li a:hover::before {
+            width: 100%; /* Animated underline */
         }
 
         /* Image Animation */
@@ -122,20 +139,11 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            filter: grayscale(100%); /* Black-and-white images */
         }
 
         img:hover {
             transform: scale(1.05);
-        }
-
-        /* Heading Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
         }
 
         /* Smooth Scrolling */
